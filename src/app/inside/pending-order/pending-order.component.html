@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <header class="header">
+    <div class="container"><a href="../../../index.html" title="Tên webiste" class="header__logo"><img src="../../../assets/images/logo.png" alt="Logo" width="318" height="64"></a>
+      <div class="header__info"> <span>nguyenphutrong@gmail.com </span><a href="#">Thoát</a></div>
+    </div>
+  </header>
+  <!--/.header-->
+
+  <div class="schedule">
+    <div class="schedule__tabs"><a href="/pending-order" class="schedule__tab schedule__tab--selected">Lệnh chờ</a><a href="/history-pending-order" class="schedule__tab">Lịch sử đặt lệnh</a><a href="/transaction" class="schedule__tab">Lịch sử giao dịch</a></div>
+    <div class="schedule__control">
+      <select class="schedule__filter">
+        <option value="">Tất cả lệnh</option>
+        <option value="1">Lệnh bán</option>
+        <option value="2">Lệnh mua</option>
+      </select>
+      <button class="schedule__cancel">Hủy bỏ tất cả</button>
+    </div>
+    <div id="schedule__list" class="schedule__list">
+      <div class="schedule__item schedule__item--sell">
+        <div class="schedule__summary">
+          <div class="schedule__statistics">
+            <div class="schedule__type">Giới hạn bán </div>
+            <div data-percent="60" data-chart="circle" data-type="sell" class="schedule__chart"></div>
+          </div>
+          <div class="schedule__description">
+            <div class="schedule__titlte">TRX/USDT</div>
+            <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
+            </div>
+            <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+          </div>
+        </div>
+        <div class="schedule__handle">
+          <div class="schedule__time">03-17 15:36:26</div>
+          <button class="schedule__cancel">Hủy bỏ</button>
+        </div>
+      </div>
+      <div class="schedule__item schedule__item--buy">
+        <div class="schedule__summary">
+          <div class="schedule__statistics">
+            <div class="schedule__type">Giới hạn mua </div>
+            <div data-percent="0" data-chart="circle" data-type="buy" class="schedule__chart"></div>
+          </div>
+          <div class="schedule__description">
+            <div class="schedule__titlte">TRX/USDT</div>
+            <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
+            </div>
+            <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+          </div>
+        </div>
+        <div class="schedule__handle">
+          <div class="schedule__time">03-17 15:36:26</div>
+          <button class="schedule__cancel">Hủy bỏ</button>
+        </div>
+      </div>
+    </div>
+    <div class="schedule__more"> <a href="#">Tải thêm</a></div>
+    <div class="schedule__more">Không có thêm dữ liệu</div>
+    <div class="schedule__empty"> <span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
+  </div>
+  <!--/.schedule-->
+
+
+</div>
