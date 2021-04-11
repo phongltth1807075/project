@@ -7,7 +7,7 @@ import {LoginService} from '../../services/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  email!: string;
+  email: any;
   password: any;
 
   constructor(private service: LoginService) { }
@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.service.singIn(this.email, this.password)
+    console.log(this.email, this.password);
+    this.service.singIn(this.email, this.password);
   }
 }

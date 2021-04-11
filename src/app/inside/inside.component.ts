@@ -9,9 +9,15 @@ import {Router} from '@angular/router';
 export class InsideComponent implements OnInit {
 
   constructor(private router: Router) {
+
   }
 
   ngOnInit(): void {
-
+    const isLogin = localStorage.getItem('isLogin');
+    if (isLogin) {
+      this.router.navigate(['/home']);
+    } else {
+      this.router.navigate(['/authentication/login']);
+    }
   }
 }

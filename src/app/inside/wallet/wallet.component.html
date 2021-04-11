@@ -1,10 +1,267 @@
-<div class="container row">
-  <span>
-    <button routerLink="/wallet-recharge" class="col-6">
-      Nạp
-    </button>
-    <button routerLink="/withdraw" class="col-6">
-      Rút
-    </button>
-  </span>
+<div class="site-wrapper recharge-coin">
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="col col-3 d-flex align-items-center justify-content-start">
+          <a routerLink="/home" class="btn-header btn-back">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="col col-6">
+          <h3 class="page-heading text-center">Giao ngay</h3>
+        </div>
+        <div class="col col-3 d-flex align-items-center justify-content-end">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content recharge-content">
+    <div class="container">
+      <div class="row">
+        <div class="recharge-top-content">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="resort-label">
+              <span>Gía trị tài sản (BTC)</span>
+              <a href="javascript:void(0)" class="wallet-toggle">
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-eye-slash"></i>
+              </a>
+            </div>
+            <div class="resort-list">
+              <i class="fas fa-clock"></i>
+            </div>
+          </div>
+          <div class="wallet-total">
+            <span class="total-by-btc">0,00000581</span>
+            <span class="total-by-usd">
+                <span class="around-symbol">
+                  &asymp;
+                </span>
+                0,339794 $
+              </span>
+          </div>
+          <div class="pnl-yesterday">
+            <label>
+              PNL của ngày hôm qua
+            </label>
+            <div class="pnl-number">
+              <span class="pnl-by-usd">+0,020006 $</span>/<span class="pnl-by-percent">+6,46%</span>
+            </div>
+          </div>
+          <div class="wallet-action">
+            <div class="button-list">
+              <a routerLink="/wallet-recharge" class="btn-primary btn-wallet-action active">Nạp</a>
+                <a routerLink="/withdraw" class="btn-primary btn-wallet-action">Rút</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="coin-list">
+          <a href="#" class="btn-primary btn-change-to-bnb">
+                <span class="button-title">
+                    Chuyển đổi số dư nhỏ sang BNB
+                </span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <div class="coin-filter">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="resort-label">
+                <i class="fas fa-check-circle"></i>
+                <span>Ẩn số dư nhỏ</span>
+              </div>
+              <div class="resort-list">
+                <i class="fas fa-sort-alpha-down"></i>
+              </div>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/1inch-coin-images.png" alt="1INCH logo">
+                  <div>
+                    <label>1INCH</label>
+                    <small>
+                      Dogecoin
+                    </small>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/axs-coin-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>AXS</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/avalanche-avax-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>AVAX</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/trx-coin-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>TRX</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/BUSD-coin-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>BUSD</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/JST-coin-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>JST</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/Xrp-coin-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>XPR</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/XLM-coin-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>XLM </label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="coin-name">
+                  <img src="assets/images/avalanche-avax-logo.png" alt="1INCH logo">
+                  <div>
+                    <label>AVAX</label>
+                    <p><small>Dogecoin</small></p>
+                  </div>
+
+                </div>
+                <div class="price-wrap">
+                  <div class="price-btc">
+                    0,879
+                  </div>
+                  <div class="price-usd">
+                    0,05 <span class="currency-symbol">$</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>

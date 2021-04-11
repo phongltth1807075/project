@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,34 +6,25 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  private static elementRef: ElementRef;
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    this.ngAfterViewInit();
+    HomeComponent.loadScript('assets/js/vendor/jquery.circlechart.js');
+    HomeComponent.loadScript('assets/js/vendor/jquery.min.js');
+    HomeComponent.loadScript('assets/js/vendor/jquery.validate.min.js');
+    HomeComponent.loadScript('assets/js/bootstrap.js');
+    HomeComponent.loadScript('assets/js/Chart.bundle.min.js');
+    HomeComponent.loadScript('assets/js/main.js');
+    HomeComponent.loadScript('assets/js/popper.min.js');
+    HomeComponent.loadScript('assets/js/swiper-bundle.min.js');
   }
 
-  async ngAfterViewInit() {
-    await this.loadScript('../../../assets/js/vendor/jquery.circlechart.js');
-    await this.loadScript('../../../assets/js/vendor/jquery.min.js');
-    await this.loadScript('../../../assets/js/vendor/jquery.validate.min.js');
-    await this.loadScript('../../../assets/js/bootstrap.js');
-    await this.loadScript('../../../assets/js/Chart.bundle.min.js');
-    await this.loadScript('../../../assets/js/main.js');
-    await this.loadScript('../../../assets/js/popper.min.js');
-    await this.loadScript('../../../assets/js/swiper-bundle.min.js');
-    await this.loadScript('../../../assets/css/style.css');
-    await this.loadScript('../../../assets/css/bootstrap.css');
-    await this.loadScript('../../../assets/css/swiper-bundle.min.css');
-  }
-
-  private loadScript(scriptUrl: string) {
-    return new Promise((resolve, reject) => {
-      const scriptElement = document.createElement('script');
-      scriptElement.src = scriptUrl;
-      scriptElement.onload = resolve;
-      document.body.appendChild(scriptElement);
-    });
+  private static loadScript(scriptUrl: string) {
+    const scriptElement = document.createElement('script');
+    scriptElement.src = scriptUrl;
+    scriptElement.type = 'text/javascript';
+    HomeComponent.elementRef.nativeElement.appendChild(scriptElement);
   }
 }
