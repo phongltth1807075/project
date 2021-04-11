@@ -24,11 +24,12 @@ export class RegisterComponent implements OnInit {
 
   async SingUp() {
     if (this.password === this.repassword) {
-      const response = await axios.get(this.authentication + '?email=' + this.email + '&password=' + this.password);
-      console.log(response.data);
-      if (response.data === 'success') {
-        await this.router.navigate(['/home']);
-      } else {
+      try {
+        const response = await axios.get(this.authentication + '?email=' + this.email + '&password=' + this.password);
+        if (response.data === 'success') {
+          await this.router.navigate(['/authentication/login']);
+        }
+      }catch (e) {
         alert('Email đã tồn tại !!!');
       }
     } else {

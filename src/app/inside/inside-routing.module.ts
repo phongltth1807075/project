@@ -15,7 +15,7 @@ import {WalletRechargeComponent} from './wallet-recharge/wallet-recharge.compone
 const routes: Routes = [
   {
     path: '', component: InsideComponent, children: [
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: '', redirectTo: 'home'},
       {path: 'home', component: HomeComponent},
       {path: 'history', component: HistoryComponent},
       {path: 'wallet', component: WalletComponent},

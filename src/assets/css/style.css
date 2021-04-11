@@ -18892,6 +18892,7 @@ label.form__error {
 
 .exchange__select {
   height: 30px;
+  background-color: #29313c;
 }
 
 .exchange__control {

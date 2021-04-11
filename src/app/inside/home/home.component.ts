@@ -1,30 +1,31 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  private static elementRef: ElementRef;
+  constructor() {
 
-  constructor() {}
-
-  ngOnInit(): void {
-    HomeComponent.loadScript('assets/js/vendor/jquery.circlechart.js');
-    HomeComponent.loadScript('assets/js/vendor/jquery.min.js');
-    HomeComponent.loadScript('assets/js/vendor/jquery.validate.min.js');
-    HomeComponent.loadScript('assets/js/bootstrap.js');
-    HomeComponent.loadScript('assets/js/Chart.bundle.min.js');
-    HomeComponent.loadScript('assets/js/main.js');
-    HomeComponent.loadScript('assets/js/popper.min.js');
-    HomeComponent.loadScript('assets/js/swiper-bundle.min.js');
   }
 
-  private static loadScript(scriptUrl: string) {
-    const scriptElement = document.createElement('script');
-    scriptElement.src = scriptUrl;
-    scriptElement.type = 'text/javascript';
-    HomeComponent.elementRef.nativeElement.appendChild(scriptElement);
+  ngOnInit(): void {
+  }
+
+  async ngAfterViewInit(): Promise<void> {
+    await this.loadScript('/assets/js/vendor/jquery.min.js');
+    await this.loadScript('/assets/js/vendor/jquery.validate.min.js');
+    await this.loadScript('/assets/js/vendor/jquery.circlechart.js');
+    await this.loadScript('/assets/js/common.js');
+  }
+
+  loadScript(scriptUrl: string): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const scriptElement = document.createElement('script');
+      scriptElement.src = scriptUrl;
+      scriptElement.onload = resolve;
+      document.body.appendChild(scriptElement);
+    });
   }
 }

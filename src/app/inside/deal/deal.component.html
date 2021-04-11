@@ -1,19 +1,22 @@
 <div class="wrapper">
   <header class="header">
-    <div class="container"><a href="../../../index.html" title="Tên webiste" class="header__logo"><img src="../../../assets/images/logo.png" alt="Logo" width="318" height="64"></a>
-      <div class="header__info"> <span>nguyenphutrong@gmail.com </span><a href="#">Thoát</a></div>
+    <div class="container"><a routerLink="../../../index.html" title="Tên webiste" class="header__logo"><img
+      src="../../../assets/images/logo.png" alt="Logo" width="318" height="64"></a>
+      <div class="header__info"><span>nguyenphutrong@gmail.com </span><a href="#">Thoát</a></div>
     </div>
   </header>
   <!--/.header-->
 
   <section data-action="buy" class="exchange">
-    <div class="exchange__header"> <a href="#" data-control="aside"> <span class="material-icons">swap_horiz </span></a><span class="exchange__type">TRX/USDT</span><span class="exchange__plus">+4,58% </span></div>
+    <div class="exchange__header"><a href="#" data-control="aside"> <span
+      class="material-icons">swap_horiz </span></a><span class="exchange__type">TRX/USDT</span><span
+      class="exchange__plus">+4,58% </span></div>
     <div class="exchange__content">
       <div class="exchange__statistics">
         <div class="exchange__table">
           <div class="exchange__row exchange__row--header">
-            <div class="exchange__cell">Giá <br />(USDT)</div>
-            <div class="exchange__cell">Số lượng <br />(TRX)</div>
+            <div class="exchange__cell">Giá <br/>(USDT)</div>
+            <div class="exchange__cell">Số lượng <br/>(TRX)</div>
           </div>
           <div class="exchange__row">
             <div class="exchange__cell exchange__subtract">0,05397</div>
@@ -77,47 +80,62 @@
             <option value="0.00003">0.00003</option>
             <option value="0.00004">0.00004</option>
           </select>
-          <button class="exchange__calculate"> <span class="material-icons">calculate</span></button>
+          <button class="exchange__calculate"><span class="material-icons">calculate</span></button>
         </div>
       </div>
       <!--/.exchange__statistics-->
-
       <div class="exchange__form">
-        <div class="exchange__tabs"> <a href="#" data-action="buy" class="exchange__tab exchange__tab--selected">Mua</a><a href="#" data-action="sell" class="exchange__tab">Bán</a></div>
+        <div class="exchange__tabs">
+          <a href="#" data-action="buy"
+             class="exchange__tab exchange__tab--selected">Mua</a>
+          <a href="#"
+             data-action="sell"
+             class="exchange__tab">Bán</a>
+        </div>
         <div class="exchange__group">
-          <select name="type" class="exchange__select">
-            <option value="1">Limit</option>
-            <option value="2">Market</option>
-            <option value="3">Stop Limit</option>
-            <option value="4">OCO</option>
-          </select>
+          <label>
+            <select name="type" class="exchange__select">
+              <option value="1">Limit</option>
+              <option value="2">Market</option>
+              <option value="3">Stop Limit</option>
+              <option value="4">OCO</option>
+            </select>
+          </label>
         </div>
         <div class="exchange__group">
           <div class="exchange__control">
-            <div class="exchange__decrement"><span class="material-icons">remove</span></div>
-            <input placeholder="Giá" type="number" name="price" min="0" class="exchange__number" />
-            <div class="exchange__increment"><span class="material-icons">add</span></div>
+            <div class="exchange__decrement">
+              <span class="material-icons">remove</span>
+            </div>
+            <input placeholder="Giá" type="number" name="price" min="0" class="exchange__number"/>
+            <div class="exchange__increment">
+              <span class="material-icons">add</span>
+            </div>
           </div>
         </div>
         <div class="exchange__group">
           <div class="exchange__control">
             <div class="exchange__decrement"><span class="material-icons">remove</span></div>
-            <input placeholder="Số lượng (TRX)" type="number" name="quantity" min="0" class="exchange__number" />
+            <input placeholder="Số lượng (TRX)" type="number" name="quantity" min="0" class="exchange__number"/>
             <div class="exchange__increment"><span class="material-icons">add</span></div>
           </div>
         </div>
         <div class="exchange__ranges">
           <label class="exchange__range">
-            <input type="radio" name="range" value="25" checked="true" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">25%</span>
+            <input type="radio" name="range" value="25" checked="true" class="exchange__radio"/><span
+            class="exchange__range-item"></span><span class="exchange__range-text">25%</span>
           </label>
           <label class="exchange__range">
-            <input type="radio" name="range" value="50" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">50%</span>
+            <input type="radio" name="range" value="50" class="exchange__radio"/><span
+            class="exchange__range-item"></span><span class="exchange__range-text">50%</span>
           </label>
           <label class="exchange__range">
-            <input type="radio" name="range" value="75" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">75%</span>
+            <input type="radio" name="range" value="75" class="exchange__radio"/><span
+            class="exchange__range-item"></span><span class="exchange__range-text">75%</span>
           </label>
           <label class="exchange__range">
-            <input type="radio" name="range" value="100" class="exchange__radio" /><span class="exchange__range-item"></span><span class="exchange__range-text">100%</span>
+            <input type="radio" name="range" value="100" class="exchange__radio"/><span
+            class="exchange__range-item"></span><span class="exchange__range-text">100%</span>
           </label>
         </div>
         <div class="exchange__group">
@@ -134,22 +152,24 @@
   </section>
   <!--/.exchange-->
   <div class="schedule">
-    <div class="schedule__header"> <span>Lệnh chờ (2)</span><a routerLink="/pending-order"><span class="material-icons">description</span></a></div>
-    <div class="schedule__control"> <a href="#schedule__list" class="schedule__toggle"><span class="material-icons">check_circle </span>Ẩn các cặp khác</a>
+    <div class="schedule__header"><span>Lệnh chờ (2)</span><a routerLink="/pending-order"><span class="material-icons">description</span></a>
+    </div>
+    <div class="schedule__control"><a href="#schedule__list" class="schedule__toggle"><span class="material-icons">check_circle </span>Ẩn
+      các cặp khác</a>
       <button class="schedule__cancel">Hủy bỏ tất cả</button>
     </div>
     <div id="schedule__list" class="schedule__list">
       <div class="schedule__item schedule__item--sell">
         <div class="schedule__summary">
           <div class="schedule__statistics">
-            <div class="schedule__type">Giới hạn bán </div>
+            <div class="schedule__type">Giới hạn bán</div>
             <div data-percent="60" data-chart="circle" data-type="sell" class="schedule__chart"></div>
           </div>
           <div class="schedule__description">
             <div class="schedule__titlte">TRX/USDT</div>
-            <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
+            <div class="schedule__detail"><span>Số lượng</span><span>0/<span>333.3</span></span>
             </div>
-            <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+            <div class="schedule__detail"><span>Giá</span><span>0,06</span></div>
           </div>
         </div>
         <div class="schedule__handle">
@@ -160,14 +180,14 @@
       <div class="schedule__item schedule__item--buy">
         <div class="schedule__summary">
           <div class="schedule__statistics">
-            <div class="schedule__type">Giới hạn mua </div>
+            <div class="schedule__type">Giới hạn mua</div>
             <div data-percent="0" data-chart="circle" data-type="buy" class="schedule__chart"></div>
           </div>
           <div class="schedule__description">
             <div class="schedule__titlte">TRX/USDT</div>
-            <div class="schedule__detail"> <span>Số lượng</span><span>0/<span>333.3</span></span>
+            <div class="schedule__detail"><span>Số lượng</span><span>0/<span>333.3</span></span>
             </div>
-            <div class="schedule__detail"> <span>Giá</span><span>0,06</span></div>
+            <div class="schedule__detail"><span>Giá</span><span>0,06</span></div>
           </div>
         </div>
         <div class="schedule__handle">
@@ -176,21 +196,25 @@
         </div>
       </div>
     </div>
-    <div class="schedule__empty"> <span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
+    <div class="schedule__empty"><span class="material-icons">find_in_page</span><span>Không có lệnh</span></div>
   </div>
   <!--/.schedule-->
 
   <a href="#" data-control="aside" class="aside__cover"></a>
   <aside id="aside" class="aside">
     <div class="aside__inner">
-      <div class="aside__heading"> <span>Thị trường</span><a href="#aside" data-control="aside" class="aside__close"> <span class="material-icons">close</span></a></div>
+      <div class="aside__heading"><span>Thị trường</span><a href="#aside" data-control="aside" class="aside__close">
+        <span class="material-icons">close</span></a></div>
       <div class="aside__search">
         <label for="aside__input" class="aside__label"><span class="material-icons">search</span></label>
         <input id="aside__input" type="text" name="keyword" class="aside__input">
       </div>
-      <div class="aside__favorite"> <span>Danh sach yêu thích: </span><a href="#">BNB</a><a href="#">BTC</a><a href="#">ALTS</a><a href="#">FIAS</a></div>
+      <div class="aside__favorite"><span>Danh sach yêu thích: </span><a href="#">BNB</a><a href="#">BTC</a><a href="#">ALTS</a><a
+        href="#">FIAS</a></div>
       <div class="aside__sort"><a href="#" class="sort__item sort__item--sorted sort__item--asc"><span>Tên</span></a>
-        <div class="aside__group"><a href="#" class="sort__item"><span>Giá gần nhất</span></a><a href="#" class="sort__item"><span>BĐ giá 24h</span></a></div>
+        <div class="aside__group"><a href="#" class="sort__item"><span>Giá gần nhất</span></a><a href="#"
+                                                                                                 class="sort__item"><span>BĐ giá 24h</span></a>
+        </div>
       </div>
       <div class="aside__list">
         <div class="aside__item">
@@ -210,7 +234,8 @@
           </div>
         </div>
         <div class="aside__item">
-          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">10x</span>
+          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span
+            class="aside__multiply">10x</span>
           </div>
           <div class="aside__detail">
             <div class="aside__price aside__subtract">0,0002321</div>
@@ -218,7 +243,8 @@
           </div>
         </div>
         <div class="aside__item">
-          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">10x</span>
+          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span
+            class="aside__multiply">10x</span>
           </div>
           <div class="aside__detail">
             <div class="aside__price aside__subtract">0,0002321</div>
@@ -226,7 +252,8 @@
           </div>
         </div>
         <div class="aside__item">
-          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">2x</span>
+          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span
+            class="aside__multiply">2x</span>
           </div>
           <div class="aside__detail">
             <div class="aside__price aside__subtract">0,0002321</div>
@@ -234,7 +261,8 @@
           </div>
         </div>
         <div class="aside__item">
-          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">10x</span>
+          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span
+            class="aside__multiply">10x</span>
           </div>
           <div class="aside__detail">
             <div class="aside__price aside__subtract">0,0002321</div>
@@ -242,7 +270,8 @@
           </div>
         </div>
         <div class="aside__item">
-          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span class="aside__multiply">5x</span>
+          <div class="aside__title"><span class="aside__name">TRX</span><span class="aside__type">/BNB</span><span
+            class="aside__multiply">5x</span>
           </div>
           <div class="aside__detail">
             <div class="aside__price aside__plus">0,0002321</div>
