@@ -12,6 +12,7 @@ import {WalletComponent} from './wallet/wallet.component';
 import {WithdrawComponent} from './withdraw/withdraw.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WalletRechargeComponent } from './wallet-recharge/wallet-recharge.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WalletRechargeComponent } from './wallet-recharge/wallet-recharge.compo
   ],
   imports: [
     InsideRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [InsideComponent]

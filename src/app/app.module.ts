@@ -11,6 +11,8 @@ import {environment} from '../environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {ToastModule} from 'ng-uikit-pro-standard';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
       AngularFireModule.initializeApp(environment.firebase),
       AngularFireAuthModule,
       AngularFirestoreModule,
-      AngularFireStorageModule
+      AngularFireStorageModule,
+      ToastModule.forRoot(),
+      BrowserAnimationsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

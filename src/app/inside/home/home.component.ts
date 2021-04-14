@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,26 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {
-
+  constructor(private afs: AngularFirestore) {
+    const clearGetUid = setInterval(() => {
+      if (localStorage.getItem('uId') !== undefined && localStorage.getItem('uId') !== null) {
+        const uid = localStorage.getItem('uId');
+        console.log(uid);
+        this.getData(uid);
+        clearInterval(clearGetUid);
+      }
+    }, 50);
   }
 
   ngOnInit(): void {
+
+  }
+
+  getData(uid: string | null) {
+    this.afs.doc('users/' + uid).valueChanges().subscribe(data => {
+      //run
+      console.log(data);
+    });
   }
 
   async ngAfterViewInit(): Promise<void> {

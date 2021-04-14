@@ -13,11 +13,11 @@ export class InsideComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const isLogin = localStorage.getItem('isLogin');
-    if (isLogin) {
-      this.router.navigate(['/home']);
-    } else {
-      this.router.navigate(['/authentication/login']);
-    }
+    // const isLogin = localStorage.getItem('isLogin');
+    // if (isLogin) {
+    //   this.router.navigate(['/home']);
+    // } else {
+    //   this.router.navigate(['/authentication/login']);
+    // }
   }
 }

@@ -75,39 +75,35 @@
         </div>
         <div class="exchange__convert">
           <select name="percentage" class="exchange__select">
-            <option value="0.00001">0.00001</option>
-            <option value="0.00002">0.00002</option>
-            <option value="0.00003">0.00003</option>
-            <option value="0.00004">0.00004</option>
+            <option value=0.00001>0.00001</option>
+            <option value=0.00002>0.00002</option>
+            <option value=0.00003>0.00003</option>
+            <option value=0.00004>0.00004</option>
           </select>
           <button class="exchange__calculate"><span class="material-icons">calculate</span></button>
         </div>
       </div>
-      <!--/.exchange__statistics-->
       <div class="exchange__form">
         <div class="exchange__tabs">
-          <a href="#" data-action="buy"
+          <a data-action="buy" (click)="choseAction($event,'Mua')"
              class="exchange__tab exchange__tab--selected">Mua</a>
-          <a href="#"
-             data-action="sell"
-             class="exchange__tab">Bán</a>
+          <a data-action="sell"
+             class="exchange__tab" (click)="choseAction($event,'Ban')">Bán</a>
         </div>
         <div class="exchange__group">
-          <label>
-            <select name="type" class="exchange__select">
-              <option value="1">Limit</option>
-              <option value="2">Market</option>
-              <option value="3">Stop Limit</option>
-              <option value="4">OCO</option>
-            </select>
-          </label>
+          <select name="type" class="exchange__select" [(ngModel)]="type">
+            <option value=1>Limit</option>
+            <option value=2>Market</option>
+            <option value=3>Stop Limit</option>
+            <option value=4>OCO</option>
+          </select>
         </div>
         <div class="exchange__group">
           <div class="exchange__control">
             <div class="exchange__decrement">
               <span class="material-icons">remove</span>
             </div>
-            <input placeholder="Giá" type="number" name="price" min="0" class="exchange__number"/>
+            <input placeholder="Giá" type="number" [(ngModel)]="price" name="price" min="0" class="exchange__number"/>
             <div class="exchange__increment">
               <span class="material-icons">add</span>
             </div>
@@ -116,7 +112,8 @@
         <div class="exchange__group">
           <div class="exchange__control">
             <div class="exchange__decrement"><span class="material-icons">remove</span></div>
-            <input placeholder="Số lượng (TRX)" type="number" name="quantity" min="0" class="exchange__number"/>
+            <input placeholder="Số lượng (TRX)" type="number" [(ngModel)]="quantity" name="quantity" min="0"
+                   class="exchange__number"/>
             <div class="exchange__increment"><span class="material-icons">add</span></div>
           </div>
         </div>
@@ -145,7 +142,8 @@
 
                             409,309561 TRX <span class="material-icons">file_download</span></span></div>
         <div class="exchange__handle">
-          <button class="exchange__submit">Mua TRX</button>
+          <button *ngIf="action==='Mua'" (click)="submitAction()" class="exchange__submit">Mua TRX</button>
+          <button *ngIf="action==='Ban'" (click)="submitAction()" class="exchange__submit">Ban TRX</button>
         </div>
       </div>
     </div>
